@@ -1,2 +1,1 @@
-# examples
-Xorbits Example Notebooks
+# Xorbits Example Notebooks
