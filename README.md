@@ -19,3 +19,11 @@ This example demonstrates how to use Xorbits to perform text deduplication on th
 | Platform | Link |
 |:--------:|:----:|
 | Colab    | https://colab.research.google.com/github/xprobe-inc/examples/blob/main/text-dedup/text-dedup.ipynb |
+
+## Example 2: Get the license with most stars using Xorbits dataset over bigcode/the-stack Hugging Face dataset
+This example demonstrates how to use Xorbits to get the license with most stars over the bigcode/the-stack dataset. The Stack contains over 6TB of permissively-licensed source code files covering 358 programming languages. The dataset was created as part of the BigCode Project, an open scientific collaboration working on the responsible development of Large Language Models 
+for Code (Code LLMs).
+
+| Platform | Link |
+|:--------:|:----:|
+| Colab    | https://colab.research.google.com/github/xprobe-inc/examples/blob/main/most-stars-license/most-stars-license.ipynb |
