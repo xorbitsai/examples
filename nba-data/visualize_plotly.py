@@ -162,13 +162,16 @@ def three_pt_player(shot_detail):
     fig.show()
 
 
-def _get_player_score(shot_detail, stat_detail):
+def _get_player_ids(shot_detail):
     player_names = shot_detail[["PLAYER_ID", "PLAYER_NAME"]].drop_duplicates()
     player_ids = player_names[player_names["PLAYER_NAME"].isin(top_20_player_names)]
     player_ids["PLAYER1_ID"] = player_ids["PLAYER_ID"]
     player_ids["PLAYER2_ID"] = player_ids["PLAYER_ID"]
     player_ids["PLAYER3_ID"] = player_ids["PLAYER_ID"]
+    return player_ids
 
+
+def _get_player_score(shot_detail, stat_detail, player_ids):
     player_stats = stat_detail.merge(
         player_ids[["PLAYER1_ID"]], how="inner", on="PLAYER1_ID"
     )
@@ -195,7 +198,8 @@ def _get_player_score(shot_detail, stat_detail):
 
 
 def key_player(shot_detail, stat_detail):
-    player_stats = _get_player_score(shot_detail, stat_detail)
+    player_ids = _get_player_ids(shot_detail)
+    player_stats = _get_player_score(shot_detail, stat_detail, player_ids)
 
     def handle(x):
         is_home = x["HTM"] == x["PLAYER1_TEAM_ABBREVIATION"]
