@@ -26,3 +26,12 @@ This example demonstrates how to use Xorbits to get the license with most stars 
 | Platform | Link |
 |:--------:|:----:|
 | Colab    | https://colab.research.google.com/github/xprobe-inc/examples/blob/main/most-stars-license/most-stars-license.ipynb |
+
+## Example 4: Data visualization using Xorbits with Plotly and Dash
+This example demonstrates how to perform data visualization using Xorbits in Plotly and Dash.
+
+You can run this example locally:
+
+| Platform |                           Link                           |
+|:--------:|:--------------------------------------------------------:|
+|  Local   | https://github.com/xorbitsai/examples/tree/main/nba-data |
